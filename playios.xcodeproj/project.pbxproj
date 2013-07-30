@@ -1,0 +1,106 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		1A9F038817A793DA004A105E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A9F038417A793D9004A105E /* playsinglepage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1A9F035B17A793D9004A105E;
+			remoteInfo = playsinglepage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A9F038417A793D9004A105E /* playsinglepage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = playsinglepage.xcodeproj; path = playsinglepage/playsinglepage.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1A9F034B17A79395004A105E = {
+			isa = PBXGroup;
+			children = (
+				1A9F038417A793D9004A105E /* playsinglepage.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		1A9F038517A793D9004A105E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A9F038917A793DA004A105E /* playsinglepage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		1A9F034C17A79395004A105E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 1A9F034F17A79395004A105E /* Build configuration list for PBXProject "playios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1A9F034B17A79395004A105E;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1A9F038517A793D9004A105E /* Products */;
+					ProjectRef = 1A9F038417A793D9004A105E /* playsinglepage.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1A9F038917A793DA004A105E /* playsinglepage.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = playsinglepage.app;
+			remoteRef = 1A9F038817A793DA004A105E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin XCBuildConfiguration section */
+		1A9F035017A79395004A105E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		1A9F035117A79395004A105E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A9F034F17A79395004A105E /* Build configuration list for PBXProject "playios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A9F035017A79395004A105E /* Debug */,
+				1A9F035117A79395004A105E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A9F034C17A79395004A105E /* Project object */;
+}
