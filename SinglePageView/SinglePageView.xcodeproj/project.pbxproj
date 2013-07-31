@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AD0E5B517A8E61C001D609F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD0E5B417A8E61C001D609F /* UIKit.framework */; };
+		1AD0E5B717A8E61C001D609F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD0E5B617A8E61C001D609F /* Foundation.framework */; };
+		1AD0E5B917A8E61C001D609F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD0E5B817A8E61C001D609F /* CoreGraphics.framework */; };
+		1AD0E5BF17A8E61C001D609F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AD0E5BD17A8E61C001D609F /* InfoPlist.strings */; };
+		1AD0E5C117A8E61C001D609F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD0E5C017A8E61C001D609F /* main.m */; };
+		1AD0E5C517A8E61C001D609F /* LEOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD0E5C417A8E61C001D609F /* LEOAppDelegate.m */; };
+		1AD0E5C717A8E61C001D609F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD0E5C617A8E61C001D609F /* Default.png */; };
+		1AD0E5C917A8E61C001D609F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD0E5C817A8E61C001D609F /* Default@2x.png */; };
+		1AD0E5CB17A8E61C001D609F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD0E5CA17A8E61C001D609F /* Default-568h@2x.png */; };
+		1AD0E5CE17A8E61C001D609F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD0E5CC17A8E61C001D609F /* MainStoryboard_iPhone.storyboard */; };
+		1AD0E5D117A8E61C001D609F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD0E5CF17A8E61C001D609F /* MainStoryboard_iPad.storyboard */; };
+		1AD0E5D417A8E61C001D609F /* LEOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD0E5D317A8E61C001D609F /* LEOViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1AD0E5B117A8E61C001D609F /* SinglePageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinglePageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AD0E5B417A8E61C001D609F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1AD0E5B617A8E61C001D609F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1AD0E5B817A8E61C001D609F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1AD0E5BC17A8E61C001D609F /* SinglePageView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SinglePageView-Info.plist"; sourceTree = "<group>"; };
+		1AD0E5BE17A8E61C001D609F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1AD0E5C017A8E61C001D609F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1AD0E5C217A8E61C001D609F /* SinglePageView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SinglePageView-Prefix.pch"; sourceTree = "<group>"; };
+		1AD0E5C317A8E61C001D609F /* LEOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEOAppDelegate.h; sourceTree = "<group>"; };
+		1AD0E5C417A8E61C001D609F /* LEOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEOAppDelegate.m; sourceTree = "<group>"; };
+		1AD0E5C617A8E61C001D609F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1AD0E5C817A8E61C001D609F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1AD0E5CA17A8E61C001D609F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1AD0E5CD17A8E61C001D609F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		1AD0E5D017A8E61C001D609F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		1AD0E5D217A8E61C001D609F /* LEOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEOViewController.h; sourceTree = "<group>"; };
+		1AD0E5D317A8E61C001D609F /* LEOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEOViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1AD0E5AE17A8E61C001D609F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AD0E5B517A8E61C001D609F /* UIKit.framework in Frameworks */,
+				1AD0E5B717A8E61C001D609F /* Foundation.framework in Frameworks */,
+				1AD0E5B917A8E61C001D609F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AD0E5A817A8E61C001D609F = {
+			isa = PBXGroup;
+			children = (
+				1AD0E5BA17A8E61C001D609F /* SinglePageView */,
+				1AD0E5B317A8E61C001D609F /* Frameworks */,
+				1AD0E5B217A8E61C001D609F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1AD0E5B217A8E61C001D609F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AD0E5B117A8E61C001D609F /* SinglePageView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1AD0E5B317A8E61C001D609F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AD0E5B417A8E61C001D609F /* UIKit.framework */,
+				1AD0E5B617A8E61C001D609F /* Foundation.framework */,
+				1AD0E5B817A8E61C001D609F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1AD0E5BA17A8E61C001D609F /* SinglePageView */ = {
+			isa = PBXGroup;
+			children = (
+				1AD0E5C317A8E61C001D609F /* LEOAppDelegate.h */,
+				1AD0E5C417A8E61C001D609F /* LEOAppDelegate.m */,
+				1AD0E5CC17A8E61C001D609F /* MainStoryboard_iPhone.storyboard */,
+				1AD0E5CF17A8E61C001D609F /* MainStoryboard_iPad.storyboard */,
+				1AD0E5D217A8E61C001D609F /* LEOViewController.h */,
+				1AD0E5D317A8E61C001D609F /* LEOViewController.m */,
+				1AD0E5BB17A8E61C001D609F /* Supporting Files */,
+			);
+			path = SinglePageView;
+			sourceTree = "<group>";
+		};
+		1AD0E5BB17A8E61C001D609F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AD0E5BC17A8E61C001D609F /* SinglePageView-Info.plist */,
+				1AD0E5BD17A8E61C001D609F /* InfoPlist.strings */,
+				1AD0E5C017A8E61C001D609F /* main.m */,
+				1AD0E5C217A8E61C001D609F /* SinglePageView-Prefix.pch */,
+				1AD0E5C617A8E61C001D609F /* Default.png */,
+				1AD0E5C817A8E61C001D609F /* Default@2x.png */,
+				1AD0E5CA17A8E61C001D609F /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1AD0E5B017A8E61C001D609F /* SinglePageView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AD0E5D717A8E61C001D609F /* Build configuration list for PBXNativeTarget "SinglePageView" */;
+			buildPhases = (
+				1AD0E5AD17A8E61C001D609F /* Sources */,
+				1AD0E5AE17A8E61C001D609F /* Frameworks */,
+				1AD0E5AF17A8E61C001D609F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SinglePageView;
+			productName = SinglePageView;
+			productReference = 1AD0E5B117A8E61C001D609F /* SinglePageView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1AD0E5A917A8E61C001D609F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LEO;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Wang Leo";
+			};
+			buildConfigurationList = 1AD0E5AC17A8E61C001D609F /* Build configuration list for PBXProject "SinglePageView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1AD0E5A817A8E61C001D609F;
+			productRefGroup = 1AD0E5B217A8E61C001D609F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1AD0E5B017A8E61C001D609F /* SinglePageView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1AD0E5AF17A8E61C001D609F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AD0E5BF17A8E61C001D609F /* InfoPlist.strings in Resources */,
+				1AD0E5C717A8E61C001D609F /* Default.png in Resources */,
+				1AD0E5C917A8E61C001D609F /* Default@2x.png in Resources */,
+				1AD0E5CB17A8E61C001D609F /* Default-568h@2x.png in Resources */,
+				1AD0E5CE17A8E61C001D609F /* MainStoryboard_iPhone.storyboard in Resources */,
+				1AD0E5D117A8E61C001D609F /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AD0E5AD17A8E61C001D609F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AD0E5C117A8E61C001D609F /* main.m in Sources */,
+				1AD0E5C517A8E61C001D609F /* LEOAppDelegate.m in Sources */,
+				1AD0E5D417A8E61C001D609F /* LEOViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1AD0E5BD17A8E61C001D609F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AD0E5BE17A8E61C001D609F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1AD0E5CC17A8E61C001D609F /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AD0E5CD17A8E61C001D609F /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		1AD0E5CF17A8E61C001D609F /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AD0E5D017A8E61C001D609F /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1AD0E5D517A8E61C001D609F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1AD0E5D617A8E61C001D609F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1AD0E5D817A8E61C001D609F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SinglePageView/SinglePageView-Prefix.pch";
+				INFOPLIST_FILE = "SinglePageView/SinglePageView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1AD0E5D917A8E61C001D609F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SinglePageView/SinglePageView-Prefix.pch";
+				INFOPLIST_FILE = "SinglePageView/SinglePageView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1AD0E5AC17A8E61C001D609F /* Build configuration list for PBXProject "SinglePageView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AD0E5D517A8E61C001D609F /* Debug */,
+				1AD0E5D617A8E61C001D609F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AD0E5D717A8E61C001D609F /* Build configuration list for PBXNativeTarget "SinglePageView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AD0E5D817A8E61C001D609F /* Debug */,
+				1AD0E5D917A8E61C001D609F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1AD0E5A917A8E61C001D609F /* Project object */;
+}

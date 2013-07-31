@@ -6,11 +6,34 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		1AD0E5DE17A8E61E001D609F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AD0E5DA17A8E61C001D609F /* SinglePageView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1AD0E5B117A8E61C001D609F;
+			remoteInfo = SinglePageView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1AD0E5DA17A8E61C001D609F /* SinglePageView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SinglePageView.xcodeproj; path = SinglePageView/SinglePageView.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		1A9F034B17A79395004A105E = {
 			isa = PBXGroup;
 			children = (
+				1AD0E5DA17A8E61C001D609F /* SinglePageView.xcodeproj */,
 			);
+			sourceTree = "<group>";
+		};
+		1AD0E5DB17A8E61C001D609F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AD0E5DF17A8E61E001D609F /* SinglePageView.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -30,11 +53,27 @@
 			);
 			mainGroup = 1A9F034B17A79395004A105E;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1AD0E5DB17A8E61C001D609F /* Products */;
+					ProjectRef = 1AD0E5DA17A8E61C001D609F /* SinglePageView.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1AD0E5DF17A8E61E001D609F /* SinglePageView.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SinglePageView.app;
+			remoteRef = 1AD0E5DE17A8E61E001D609F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin XCBuildConfiguration section */
 		1A9F035017A79395004A105E /* Debug */ = {
