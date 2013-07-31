@@ -10,6 +10,10 @@
 
 @interface LEOViewController ()
 
+- (IBAction)greating:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *testField;
+@property (weak, nonatomic) IBOutlet UILabel *saying;
+
 @end
 
 @implementation LEOViewController
@@ -26,4 +30,6 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)greating:(id)sender {
+}
 @end

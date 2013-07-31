@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LEOViewController : UIViewController
+@interface LEOViewController : UIViewController<UITextFieldDelegate>
 
 @end
