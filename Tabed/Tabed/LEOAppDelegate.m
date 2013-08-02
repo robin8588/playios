@@ -1,8 +1,8 @@
 //
 //  LEOAppDelegate.m
-//  SinglePageView
+//  Tabed
 //
-//  Created by Wang Leo on 13-7-31.
+//  Created by Wang Leo on 13-8-2.
 //  Copyright (c) 2013年 Wang Leo. All rights reserved.
 //
 
@@ -12,8 +12,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    
     // Override point for customization after application launch.
     return YES;
 }

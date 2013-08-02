@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
+		1A982CE517AB5C3000B0A208 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A982CE017AB5C2E00B0A208 /* Tabed.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1A982CAC17AB5C2E00B0A208;
+			remoteInfo = Tabed;
+		};
 		1AD0E5DE17A8E61E001D609F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1AD0E5DA17A8E61C001D609F /* SinglePageView.xcodeproj */;
@@ -17,13 +24,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A982CE017AB5C2E00B0A208 /* Tabed.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Tabed.xcodeproj; path = Tabed/Tabed.xcodeproj; sourceTree = "<group>"; };
 		1AD0E5DA17A8E61C001D609F /* SinglePageView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SinglePageView.xcodeproj; path = SinglePageView/SinglePageView.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		1A982CE117AB5C2E00B0A208 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A982CE617AB5C3000B0A208 /* Tabed.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		1A9F034B17A79395004A105E = {
 			isa = PBXGroup;
 			children = (
+				1A982CE017AB5C2E00B0A208 /* Tabed.xcodeproj */,
 				1AD0E5DA17A8E61C001D609F /* SinglePageView.xcodeproj */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +75,10 @@
 					ProductGroup = 1AD0E5DB17A8E61C001D609F /* Products */;
 					ProjectRef = 1AD0E5DA17A8E61C001D609F /* SinglePageView.xcodeproj */;
 				},
+				{
+					ProductGroup = 1A982CE117AB5C2E00B0A208 /* Products */;
+					ProjectRef = 1A982CE017AB5C2E00B0A208 /* Tabed.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -66,6 +87,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		1A982CE617AB5C3000B0A208 /* Tabed.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Tabed.app;
+			remoteRef = 1A982CE517AB5C3000B0A208 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		1AD0E5DF17A8E61E001D609F /* SinglePageView.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;

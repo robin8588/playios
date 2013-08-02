@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LEOViewController : UIViewController<UITextFieldDelegate>
+@interface LEOViewController : UIViewController<UITextFieldDelegate,UIAlertViewDelegate>
 
 @property  NSString *userName;
 @end

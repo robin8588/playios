@@ -90,25 +90,13 @@
                     <connections>
                         <outlet property="label" destination="dRF-5K-0Vx" id="A48-DV-Ccs"/>
                         <outlet property="text" destination="SvX-0M-iMC" id="3ic-cA-uLL"/>
+                        <outlet property="uswitch" destination="Rm8-AY-eeX" id="Zts-GD-9cQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
-    <classes>
-        <class className="LEOViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LEOViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="greeting:"/>
-                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="text" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
