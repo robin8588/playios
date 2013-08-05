@@ -8,23 +8,25 @@
 
 #import "LEOViewController.h"
 
-@interface LEOViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *label;
-@property (weak, nonatomic) IBOutlet UITextField *text;
-@property (strong, nonatomic) IBOutlet UISwitch *uswitch;
-
-- (IBAction)greeting:(id)sender;
-
-@end
-
 @implementation LEOViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self.uswitch setOn:NO];
-    [self.uswitch addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+    self.view.backgroundColor=[UIColor blackColor];
+    self.myWebView=[[UIWebView alloc] initWithFrame:self.view.bounds];
+    self.myWebView.scalesPageToFit=YES;
+    self.myWebView.delegate=self;
+    [self.view addSubview:self.myWebView];
+    
+    NSURL *url=[NSURL URLWithString:@"http://crs.tourantrip.com"];
+    NSURLRequest *request=[NSURLRequest requestWithURL:url];
+    [self.myWebView loadRequest:request];
+    
+    self.myindicator =[[UIActivityIndicatorView alloc] initWithFrame:self.view.bounds];
+    [self.myindicator setColor:[UIColor blackColor]];
+    [self.view addSubview:self.myindicator];
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,43 +35,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)greeting:(id)sender {
-        
-    UIAlertView *alertView=[[UIAlertView alloc] initWithTitle:@"这是Alert" message:@"第一个消息" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"O了", nil];
-    
-    [alertView show];
-    [self.text resignFirstResponder];
+
+- (void)webViewDidStartLoad:(UIWebView *)webView{
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    [self.myindicator startAnimating];
+}
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    [self.myindicator stopAnimating];
+}
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    UIAlertView *uialert=[[UIAlertView alloc] initWithTitle:@"加载错误" message:@"页面无法打开" delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
+    [uialert show];
+    [self.myindicator stopAnimating];
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)theTextField{
-    if(theTextField==self.text){
-        [theTextField resignFirstResponder];
-    }
-    return YES;
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if(buttonIndex==0){
-        NSLog(@"0 fired");
-    };
-    if(buttonIndex==1){
-        self.userName=self.text.text;
-        NSString *nameString=self.userName;
-        if([nameString length]==0){
-            nameString=@"hello";
-        }
-        NSString *greeting=[[NSString alloc] initWithFormat:@"you %@",nameString];
-        self.label.text=greeting;
-
-    }
-}
-
--(void)switchChanged:(UISwitch *)sender{
-    NSLog(@"sender is %@",sender);
-    if([sender isOn]){
-        self.text.text=@"Turn ON";
-    }else{
-        self.text.text =@"Turn Off";
-    }
-}
 @end

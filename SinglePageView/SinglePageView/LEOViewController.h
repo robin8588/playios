@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LEOViewController : UIViewController<UITextFieldDelegate,UIAlertViewDelegate>
+@interface LEOViewController : UIViewController<UIWebViewDelegate>
 
-@property  NSString *userName;
+@property (nonatomic,strong) UIWebView *myWebView;
+@property (nonatomic,strong) UIActivityIndicatorView *myindicator;
 @end
