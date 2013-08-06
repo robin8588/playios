@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LEOViewController : UIViewController<UIWebViewDelegate>
+@interface LEOViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
-@property (nonatomic,strong) UIWebView *myWebView;
-@property (nonatomic,strong) UIActivityIndicatorView *myindicator;
+@property (nonatomic,strong) UITableView *myTableView;
 @end
