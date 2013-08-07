@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A8A054617B2379E0019B549 /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A054017B2379E0019B549 /* CJSONDeserializer.m */; };
+		1A8A054717B2379E0019B549 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A054217B2379E0019B549 /* CJSONSerializer.m */; };
+		1A8A054817B2379E0019B549 /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A054517B2379E0019B549 /* NSDictionary_JSONExtensions.m */; };
 		1AD0E5B517A8E61C001D609F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD0E5B417A8E61C001D609F /* UIKit.framework */; };
 		1AD0E5B717A8E61C001D609F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD0E5B617A8E61C001D609F /* Foundation.framework */; };
 		1AD0E5B917A8E61C001D609F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD0E5B817A8E61C001D609F /* CoreGraphics.framework */; };
@@ -22,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A8A053F17B2379E0019B549 /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
+		1A8A054017B2379E0019B549 /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
+		1A8A054117B2379E0019B549 /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
+		1A8A054217B2379E0019B549 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
+		1A8A054317B2379E0019B549 /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
+		1A8A054417B2379E0019B549 /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
+		1A8A054517B2379E0019B549 /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
 		1AD0E5B117A8E61C001D609F /* SinglePageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinglePageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD0E5B417A8E61C001D609F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1AD0E5B617A8E61C001D609F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -55,9 +65,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A8A053E17B2379E0019B549 /* TouchJSON */ = {
+			isa = PBXGroup;
+			children = (
+				1A8A053F17B2379E0019B549 /* CJSONDeserializer.h */,
+				1A8A054017B2379E0019B549 /* CJSONDeserializer.m */,
+				1A8A054117B2379E0019B549 /* CJSONSerializer.h */,
+				1A8A054217B2379E0019B549 /* CJSONSerializer.m */,
+				1A8A054317B2379E0019B549 /* JSONRepresentation.h */,
+				1A8A054417B2379E0019B549 /* NSDictionary_JSONExtensions.h */,
+				1A8A054517B2379E0019B549 /* NSDictionary_JSONExtensions.m */,
+			);
+			name = TouchJSON;
+			path = Source;
+			sourceTree = "<group>";
+		};
 		1AD0E5A817A8E61C001D609F = {
 			isa = PBXGroup;
 			children = (
+				1A8A053E17B2379E0019B549 /* TouchJSON */,
 				1AD0E5BA17A8E61C001D609F /* SinglePageView */,
 				1AD0E5B317A8E61C001D609F /* Frameworks */,
 				1AD0E5B217A8E61C001D609F /* Products */,
@@ -181,6 +207,9 @@
 				1AD0E5C117A8E61C001D609F /* main.m in Sources */,
 				1AD0E5C517A8E61C001D609F /* LEOAppDelegate.m in Sources */,
 				1AD0E5D417A8E61C001D609F /* LEOViewController.m in Sources */,
+				1A8A054617B2379E0019B549 /* CJSONDeserializer.m in Sources */,
+				1A8A054717B2379E0019B549 /* CJSONSerializer.m in Sources */,
+				1A8A054817B2379E0019B549 /* NSDictionary_JSONExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

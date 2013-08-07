@@ -7,6 +7,7 @@
 //
 
 #import "LEOViewController.h"
+#import "CJSONDeserializer.h"
 
 @implementation LEOViewController
 
@@ -14,11 +15,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.myTableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-    self.myTableView.dataSource=self;
-    self.myTableView.delegate=self;
-    self.myTableView.autoresizingMask=UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-    [self.view addSubview:self.myTableView];
+    self.alert=[[UIAlertView alloc] initWithTitle:@"登陆" message:@"输入登陆信息" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"登陆", nil];
+    [self.alert setAlertViewStyle:UIAlertViewStyleLoginAndPasswordInput];
+    
+    [self.alert show];
+    self.label=[[UILabel alloc] initWithFrame:self.view.bounds];
+    self.button=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [self.button setFrame:CGRectMake(20.0f, 80.0f, 280.0f, 44.0f)];
+    [self.button setTitle:@"Send" forState:UIControlStateNormal];
+    [self.button addTarget:self action:@selector(sendSMS:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.label];
+    [self.view addSubview:self.button];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -27,131 +35,86 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    NSInteger result=0;
-    if([tableView isEqual:self.myTableView]){
-        result=3;
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if([self.alert isEqual:alertView]){
+        if(buttonIndex==1){
+            NSString *username=[[alertView textFieldAtIndex:0] text];
+            NSString *password=[[alertView textFieldAtIndex:1] text];
+            
+            NSURL *url=[[NSURL alloc] initWithString:@"http://crs.i568.me/Account/Logon"];
+            NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL: url];
+            [request setHTTPMethod:@"POST"];
+            NSString *body=[[NSString alloc] initWithFormat:@"UserName=%@&Password=%@",username,password];
+            [request setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];
+            
+            NSURLResponse *response=nil;
+            NSError *error=nil;
         
-    }
-    return result;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSInteger result=0;
-    if([tableView isEqual:self.myTableView]){
-        switch (section) {
-            case 0:
-                result=3;
-                break;
-            case 1:
-                result=5;
-                break;
-            case 2:
-                result=8;
-                break;
-            default:
-                break;
+            NSData *data=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+            
+            if ([data length] > 0 &&
+                error == nil){
+                
+                NSHTTPURLResponse *httpRespone=(NSHTTPURLResponse *)response;
+                NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                
+                
+                NSDictionary *headers=[httpRespone allHeaderFields];
+                NSLog( @"data: %@" , result ) ;
+                NSLog( @"header: %@" , headers ) ;
+                NSLog(@"statusCode : %d",[httpRespone statusCode]);
+                
+            }
+            else if ([data length] == 0 &&
+                     error == nil){
+                NSLog(@"No data was returned.");
+            }
+            else if (error != nil){
+                NSLog(@"Error happened = %@", error);
+            }
         }
     }
-    return result;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *result=nil;
-    if([tableView isEqual:self.myTableView]){
-        static NSString *tableViewCellIdentifier=@"MyCell";
-        result=[tableView dequeueReusableCellWithIdentifier:tableViewCellIdentifier];
-        
-        if(result==nil) {
-            result=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableViewCellIdentifier];
-        }
-        result.textLabel.text=[NSString stringWithFormat:@"Section %ld,Cell %ld",(long)indexPath.section,(long)indexPath.row];
-        result.accessoryType =UITableViewCellAccessoryDisclosureIndicator;
-    }
-    return result;
+- (void)willPresentAlertView:(UIAlertView *)alertView{
+    [[alertView textFieldAtIndex:0]setText:@""];
+    [[alertView textFieldAtIndex:1]setText:@""];
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if([tableView isEqual:self.myTableView]){
-        NSLog(@"%@",[NSString stringWithFormat:@"Cell %ld in Section %ld is selcet",(long)indexPath.row,(long)indexPath.section]);
-    }
-}
-
-/*- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UILabel *result=nil;
-    if([tableView isEqual:self.myTableView]){
-        UILabel *label =[[UILabel alloc] initWithFrame:CGRectZero];
-        label.text=[[NSString alloc] initWithFormat:@"Section %ld Header",(long)section];
-        label.backgroundColor=[UIColor clearColor];
-        [label sizeToFit];
-        
-        label.frame=CGRectMake(label.frame.origin.x+10.f, 5.0f, label.frame.size.width, label.frame.size.height);
-        CGRect resultFrame=CGRectMake(0.0f, 0.0f, label.frame.size.width+10.0f, label.frame.size.height);
-        result=[[UIView alloc] initWithFrame:resultFrame];
-        [result addSubview:label];
-    }
-    return result;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    UILabel *result=nil;
-    if([tableView isEqual:self.myTableView]){
-        result=[[UILabel alloc] initWithFrame:CGRectZero];
-        result.text=[[NSString alloc] initWithFormat:@"Section %ld Footer",(long)section];
-        result.backgroundColor=[UIColor clearColor];
-        [result sizeToFit];
-    }
-    return result;
-}*/
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    CGFloat result=0.0f;
-    if([tableView isEqual:self.myTableView]){
-        result=30.f;
-    }
-    return result;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    CGFloat result=0.0f;
-    if([tableView isEqual:self.myTableView]){
-        result=30.f;
-    }
-    return result;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    NSString *result=nil;
-    if([tableView isEqual:self.myTableView]){
-        result=[[NSString alloc]initWithFormat:@"SectionLabel %ld Header",(long)section];
-    }
-    return result;
-}
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
-    NSString *result=nil;
-    if([tableView isEqual:self.myTableView]){
-        result=[[NSString alloc]initWithFormat:@"SectionLabel %ld Footer",(long)section];
-    }
-    return result;
-}
-
--(BOOL)tableView:(UITableView *)tableView shouldShowMenuForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return YES;
-}
-
--(BOOL)tableView:(UITableView *)tableView canPerformAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender{
-    NSLog(@"%@",NSStringFromSelector(action));
-    if(action == @selector(copy:)){
-    return YES;
-    }
+-(void)sendSMS:(id)sender{
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    NSURL *url=[[NSURL alloc] initWithString:@"http://crs.i568.me/Account/sendsms"];
+    NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"POST"];
+    NSURLResponse *response=nil;
+    NSError *error=nil;
     
-    return NO;
-}
-
--(void)tableView:(UITableView *)tableView performAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender{
-    if(action==@selector(copy:)){
-        UITableViewCell *cell=[tableView cellForRowAtIndexPath:indexPath];
-        UIPasteboard *pasteBoard=[UIPasteboard generalPasteboard];
-        [pasteBoard setString:cell.textLabel.text];
+    
+    NSData *data=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    if ([data length] > 0 &&
+        error == nil){
+                
+        NSHTTPURLResponse *httpRespone=(NSHTTPURLResponse *)response;
+        
+        NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSDictionary *dicresult=[[CJSONDeserializer deserializer] deserializeAsDictionary:data error:&error];
+        NSString *logonresult=[dicresult valueForKey:@"Error"];
+        
+        NSDictionary *headers=[httpRespone allHeaderFields];
+        NSLog( @"data: %@" , result ) ;
+        NSLog( @"header: %@" , headers ) ;
+        NSLog( @"statusCode : %d",[httpRespone statusCode]);
+        [self.label setText:logonresult];
+        
     }
+    else if ([data length] == 0 &&
+             error == nil){
+        NSLog(@"No data was returned.");
+    }
+    else if (error != nil){
+        NSLog(@"Error happened = %@", error);
+    }
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 @end
