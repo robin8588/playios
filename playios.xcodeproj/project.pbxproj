@@ -14,6 +14,13 @@
 			remoteGlobalIDString = 1A982CAC17AB5C2E00B0A208;
 			remoteInfo = Tabed;
 		};
+		1AA9E02217B344C70088997E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AA9E01E17B344C60088997E /* EmptyView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1AA9DFFE17B344C60088997E;
+			remoteInfo = EmptyView;
+		};
 		1AD0E5DE17A8E61E001D609F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1AD0E5DA17A8E61C001D609F /* SinglePageView.xcodeproj */;
@@ -25,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		1A982CE017AB5C2E00B0A208 /* Tabed.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Tabed.xcodeproj; path = Tabed/Tabed.xcodeproj; sourceTree = "<group>"; };
+		1AA9E01E17B344C60088997E /* EmptyView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EmptyView.xcodeproj; path = EmptyView/EmptyView.xcodeproj; sourceTree = "<group>"; };
 		1AD0E5DA17A8E61C001D609F /* SinglePageView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SinglePageView.xcodeproj; path = SinglePageView/SinglePageView.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,9 +48,18 @@
 		1A9F034B17A79395004A105E = {
 			isa = PBXGroup;
 			children = (
+				1AA9E01E17B344C60088997E /* EmptyView.xcodeproj */,
 				1A982CE017AB5C2E00B0A208 /* Tabed.xcodeproj */,
 				1AD0E5DA17A8E61C001D609F /* SinglePageView.xcodeproj */,
 			);
+			sourceTree = "<group>";
+		};
+		1AA9E01F17B344C60088997E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AA9E02317B344C70088997E /* EmptyView.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		1AD0E5DB17A8E61C001D609F /* Products */ = {
@@ -72,6 +89,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 1AA9E01F17B344C60088997E /* Products */;
+					ProjectRef = 1AA9E01E17B344C60088997E /* EmptyView.xcodeproj */;
+				},
+				{
 					ProductGroup = 1AD0E5DB17A8E61C001D609F /* Products */;
 					ProjectRef = 1AD0E5DA17A8E61C001D609F /* SinglePageView.xcodeproj */;
 				},
@@ -92,6 +113,13 @@
 			fileType = wrapper.application;
 			path = Tabed.app;
 			remoteRef = 1A982CE517AB5C3000B0A208 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1AA9E02317B344C70088997E /* EmptyView.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = EmptyView.app;
+			remoteRef = 1AA9E02217B344C70088997E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		1AD0E5DF17A8E61E001D609F /* SinglePageView.app */ = {

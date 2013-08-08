@@ -41,7 +41,7 @@
             NSString *username=[[alertView textFieldAtIndex:0] text];
             NSString *password=[[alertView textFieldAtIndex:1] text];
             
-            NSURL *url=[[NSURL alloc] initWithString:@"http://crs.i568.me/Account/Logon"];
+            NSURL *url=[[NSURL alloc] initWithString:@"http://192.168.1.88/tourantrip/Account/Logon"];
             NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL: url];
             [request setHTTPMethod:@"POST"];
             NSString *body=[[NSString alloc] initWithFormat:@"UserName=%@&Password=%@",username,password];
@@ -83,7 +83,7 @@
 
 -(void)sendSMS:(id)sender{
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-    NSURL *url=[[NSURL alloc] initWithString:@"http://crs.i568.me/Account/sendsms"];
+    NSURL *url=[[NSURL alloc] initWithString:@"http://192.168.1.88/tourantrip/Account/sendsms"];
     NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:url];
     [request setHTTPMethod:@"POST"];
     NSURLResponse *response=nil;
