@@ -28,12 +28,20 @@
 			remoteGlobalIDString = 1AD0E5B117A8E61C001D609F;
 			remoteInfo = SinglePageView;
 		};
+		1AE4213917B89A24001A1B58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AE4213517B89A23001A1B58 /* CoreData.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1AE4211017B89A23001A1B58;
+			remoteInfo = CoreData;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1A982CE017AB5C2E00B0A208 /* Tabed.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Tabed.xcodeproj; path = Tabed/Tabed.xcodeproj; sourceTree = "<group>"; };
 		1AA9E01E17B344C60088997E /* EmptyView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EmptyView.xcodeproj; path = EmptyView/EmptyView.xcodeproj; sourceTree = "<group>"; };
 		1AD0E5DA17A8E61C001D609F /* SinglePageView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SinglePageView.xcodeproj; path = SinglePageView/SinglePageView.xcodeproj; sourceTree = "<group>"; };
+		1AE4213517B89A23001A1B58 /* CoreData.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreData.xcodeproj; path = CoreData/CoreData.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -48,6 +56,7 @@
 		1A9F034B17A79395004A105E = {
 			isa = PBXGroup;
 			children = (
+				1AE4213517B89A23001A1B58 /* CoreData.xcodeproj */,
 				1AA9E01E17B344C60088997E /* EmptyView.xcodeproj */,
 				1A982CE017AB5C2E00B0A208 /* Tabed.xcodeproj */,
 				1AD0E5DA17A8E61C001D609F /* SinglePageView.xcodeproj */,
@@ -70,6 +79,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1AE4213617B89A23001A1B58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AE4213A17B89A24001A1B58 /* CoreData.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXProject section */
@@ -88,6 +105,10 @@
 			mainGroup = 1A9F034B17A79395004A105E;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 1AE4213617B89A23001A1B58 /* Products */;
+					ProjectRef = 1AE4213517B89A23001A1B58 /* CoreData.xcodeproj */;
+				},
 				{
 					ProductGroup = 1AA9E01F17B344C60088997E /* Products */;
 					ProjectRef = 1AA9E01E17B344C60088997E /* EmptyView.xcodeproj */;
@@ -127,6 +148,13 @@
 			fileType = wrapper.application;
 			path = SinglePageView.app;
 			remoteRef = 1AD0E5DE17A8E61E001D609F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1AE4213A17B89A24001A1B58 /* CoreData.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = CoreData.app;
+			remoteRef = 1AE4213917B89A24001A1B58 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

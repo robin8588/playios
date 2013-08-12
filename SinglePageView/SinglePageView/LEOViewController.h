@@ -9,8 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LEOViewController : UIViewController<UIAlertViewDelegate>
-@property UIAlertView * alert;
-@property UILabel *label;
-@property UIButton *button;
-@property UIActivityIndicatorView *loading;
+
 @end
